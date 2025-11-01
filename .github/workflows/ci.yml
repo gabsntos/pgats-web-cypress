@@ -23,10 +23,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests and generate mochawesome report
-        run: npm run report:all
-        env:
-          CI: true
+      - name: Install chai
+        run: npm i chai --save-dev
+
+      - name: Install chance
+        run: npm i chance --save-dev
+
+      - name: Install mochawesome
+        run: npm install --save-dev mochawesome
+
+      - name: Run e2e tests
+        run: npm test
 
       - name: Upload mochawesome report
         if: always()
