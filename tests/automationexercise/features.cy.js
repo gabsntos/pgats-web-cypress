@@ -8,7 +8,7 @@ beforeEach(() => {
     cy.visit('https://automationexercise.com/')
 });
 
-describe('Sign up and log in', () => {
+describe('Sign up and log in page', () => {
 
     beforeEach(() => {
         menuPage.selectMenuOption('Signup / Login')
